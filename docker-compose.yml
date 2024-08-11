@@ -1,0 +1,37 @@
+version: "3"
+services:
+  pgsql:
+    image: postgres:14.7
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - "7778:5432"
+    networks:
+      - dev-net
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: MVP2_Backend
+  adminer:
+      image: adminer
+      restart: always
+      networks:
+          - dev-net
+      ports:
+          - 8080:8080
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - ./rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - dev-net
+networks:
+  dev-net:
+    driver: bridge

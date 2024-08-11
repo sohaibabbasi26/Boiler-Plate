@@ -1,0 +1,42 @@
+{
+  "name": "boiler-plate",
+  "version": "1.0.0",
+  "description": "This is a flexible boilerplate code that can kick-start any kind of applications for you!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohaibabbasi26/Boiler-Plate.git"
+  },
+  "keywords": [
+    "boiler-plate"
+  ],
+  "author": "Sohaib Abbasi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sohaibabbasi26/Boiler-Plate/issues"
+  },
+  "homepage": "https://github.com/sohaibabbasi26/Boiler-Plate#readme",
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/websocket": "^10.0.1",
+    "amqplib": "^0.10.4",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "fastify-socket.io": "^5.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "openai": "^4.52.7",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3",
+    "socket.io": "^4.7.5",
+    "typeorm": "^0.3.20"
+  }
+}

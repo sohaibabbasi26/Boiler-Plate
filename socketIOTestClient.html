@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Client</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Socket.IO Test</h1>
+    <script>
+        // Create a connection to the server
+        const socket = io('http://localhost:3200');
+
+        // Handle connection
+        socket.on('connect', () => {
+            console.log('Connected to Socket.IO server');
+            socket.send("hi from client");
+        });
+
+        // Handle messages from the server
+        socket.on('message', (data) => {
+            console.log("Message from server:", data);
+        });
+
+        // Handle disconnection
+        socket.on('disconnect', () => {
+            console.log("Disconnected from Socket.IO server");
+        });
+
+        // Handle errors
+        socket.on('connect_error', (error) => {
+            console.error("Socket.IO Error:", error);
+        });
+    </script>
+</body>
+</html>
