@@ -43,22 +43,18 @@ This boilerplate also includes several useful utilities:
 ## Getting Started
 
 1. **Clone the repository:**
-    ```bash
     git clone <repository-url>
-    ```
 
 2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
 
-3. **Configure your environment:**
-    - Update the `.env` file with your configurations for PostgreSQL, RabbitMQ, Socket.io, OpenAI, and Gmail.
+    npm install
+
+
+3. **build and run docker-compose containers**
+    docker-compose up -d
 
 4. **Start the development server:**
-    ```bash
-    npm run dev
-    ```
+    npm start
 
 ## Usage
 
